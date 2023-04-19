@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: consolas, sans-serif;
+        }
+
+        .bg {
+            margin-bottom: 20px;
+            background-color: #2d2d30;
+            color: white;
+            padding: 5px 15px;
+            width: 15%;
+            border-radius: 5%;
+        }
+
+        .sub {
+            background-color: #2d2d30;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5%;
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    {%if (error) %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Errore!</strong> {{error}}
+    </div>
+    {%endif%}
+    <div class="bg">
+        <p>Esercizio 1 - Cliente con Nome e Cognome scelto </p>
+        <form method="get" action="/res/1/">
+            <label for="">First Name</label>
+            <br>
+            <input type="text" name="first_name" placeholder="ex. Mario">
+            <br><br>
+            <label for="">Last Name</label>
+            <br>
+            <input type="text" name="last_name" placeholder="ex. Rossi">
+            <br><br>
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 2 - Elenco di clienti della città scelta</p>
+        <form method="get" action="/res/2/">
+            <label for="">City</label>
+            <br>
+            <input type="text" name="city" placeholder="ex. Pomona">
+            <br><br>
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 3 - Clienti per ogni stato</p>
+        <form method="get" action="/res/3/">
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 4 - Lo stato con il maggior numero di clienti</p>
+        <form method="get" action="/res/4/">
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 5 - Grafico Barre Verticali. Che rappresentano il numero di clienti per ogni stato</p>
+        <form method="get" action="/res/5/">
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 6 - Il nome, Il cognome e Il telefono dei clienti di cui non si conosce la mail</p>
+        <form method="get" action="/res/6/">
+            <input class="sub" type="submit">
+        </form>
+    </div>
+    <div class="bg">
+        <p>Esercizio 7 - Il nome e Il cognome dei clienti che hanno la mail di un particolare provider inserito dall'utente</p>
+        <form method="get" action="/res/7/">
+            <label for="">Provider Email</label>
+            <br>
+            <input type="text" name="provider" placeholder="ex. yahoo.com">
+            <br><br>
+            <input class="sub" type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
